@@ -12,12 +12,18 @@ DATA_RAW_DIR = ROOT_DIR / "data" / "raw"
 DATA_PROCESSED_DIR = ROOT_DIR / "data" / "processed"
 MODELS_DIR = ROOT_DIR / "models"
 PLOTS_DIR = ROOT_DIR / "plots"
+RESULTS_DIR = ROOT_DIR / "results"
+RESULTS_FILE = RESULTS_DIR / "metrics.json"
 
 # --- Data ----------------------------------------------------------------
 TICKER = "AAPL"          # primary ticker for the main experiment
 START_DATE = "2015-01-01"
 END_DATE = None          # None = up to today
 INTERVAL = "1d"          # daily bars
+
+# --- Features --------------------------------------------------------------
+FEATURE_COLUMNS = ["Open", "High", "Low", "Close", "Volume"]
+TARGET_COLUMN = "Close"
 
 # --- Sliding window --------------------------------------------------------
 LOOKBACK = 60             # trading days of history fed into the model
